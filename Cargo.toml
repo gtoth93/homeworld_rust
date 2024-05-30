@@ -1,0 +1,17 @@
+[package]
+name = "homeworld_rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+bytemuck = { version = "1.16", features = ["derive", "extern_crate_std"] }
+
+[build-dependencies]
+anyhow = "1.0"
+fs_extra = "1.3"
+glob = "0.3"
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+absolute_paths = "warn"
