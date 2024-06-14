@@ -3,6 +3,9 @@ use std::{fs::File, io::Read, path::Path};
 use anyhow::{Error, Result};
 use bytemuck::{Pod, Zeroable};
 
+#[cfg(test)]
+mod tests;
+
 const BF_FILE_HEADER: &[u8; 7] = b"RBF1.23";
 
 pub struct BigTOC {
@@ -24,6 +27,16 @@ struct BigTOCFileEntry {
     timestamp: i32,
     compression_type: u8,
     _padding2: [u8; 3],
+}
+
+pub fn add(
+    bigfile_name: &str,
+    file_names: &[&str],
+    compress: bool,
+    is_newer: bool,
+    store_paths: bool,
+    console_output: bool,
+) {
 }
 
 pub fn open(file_path: &Path) -> Result<BigTOC> {

@@ -1,5 +1,3 @@
-use std::path::Path;
-
 use anyhow::Result;
 
 mod bigfile;
@@ -23,7 +21,5 @@ fn main() -> Result<()> {
 
     // TODO handle logging based on Debug or Release profile
 
-    let main_toc = bigfile::open(&Path::new(env!("OUT_DIR")).join("res").join("Homeworld.big"))?;
-    let update_toc = bigfile::open(&Path::new(env!("OUT_DIR")).join("res").join("Update.big"))?;
     Ok(())
 }
