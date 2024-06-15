@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-anyhow = "1.0"
+derive_more = { version = "1.0.0-beta", features = ["from"] }
 bytemuck = { version = "1.16", features = ["derive", "extern_crate_std"] }
 
 [build-dependencies]
@@ -14,7 +14,6 @@ glob = "0.3"
 
 [lints.clippy]
 pedantic = "warn"
-absolute-paths = { level = "warn", priority = 1 }
 arithmetic-side-effects = { level = "warn", priority = 1 }
 as-conversions = { level = "warn", priority = 1 }
 clone-on-ref-ptr = { level = "warn", priority = 1 }

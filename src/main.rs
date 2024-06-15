@@ -1,7 +1,11 @@
-use anyhow::Result;
+//! This crate is the game Homeworld from 1999, rewritten from the ground up in Rust.
+
+pub use self::error::{Error, Result};
 
 mod bigfile;
+mod error;
 
+/// The entry point for the game
 fn main() -> Result<()> {
     // TODO check if another instance is already running
 
