@@ -1,3 +1,5 @@
+//! A script for building the Homeworld crate.
+
 use std::env;
 
 use anyhow::Result;

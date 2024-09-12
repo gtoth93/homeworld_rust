@@ -1,6 +1,6 @@
 //! This crate is the game Homeworld from 1999, rewritten from the ground up in Rust.
 
-pub use self::error::{Error, Result};
+pub use self::error::Result;
 
 mod bigfile;
 mod error;

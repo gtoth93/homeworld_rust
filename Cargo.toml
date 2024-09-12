@@ -4,8 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-derive_more = { version = "1.0.0-beta", features = ["from"] }
-bytemuck = { version = "1.16", features = ["derive", "extern_crate_std"] }
+derive_more = { version = "1.0.0-beta.6", features = ["from"] }
+tempfile = "3.10"
+zerocopy = { version = "0.7", features = ["derive"] }
 
 [build-dependencies]
 anyhow = "1.0"

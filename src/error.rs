@@ -11,13 +11,7 @@ pub type Result<T> = std::result::Result<T, Error>;
 #[derive(Debug, From)]
 pub enum Error {
     #[from]
-    ConversionError,
-    #[from]
     BigFile(bigfile::Error),
-    #[from]
-    Io(std::io::Error),
-    #[from]
-    PodCast(bytemuck::PodCastError),
 }
 
 impl Display for Error {
